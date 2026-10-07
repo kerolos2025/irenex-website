@@ -595,7 +595,7 @@ h2 {
     display:flex;
     align-items:center;
     gap:14px;
-    width:fit-content;
+    /* width:fit-content; */
     padding:12px 15px;
     border:1px solid var(--line);
     border-radius:14px;
@@ -738,7 +738,7 @@ footer {
 }
 
 @media(max-width:620px) {
-    .grid,.portfolio,.audience,.process {
+    .portfolio,.audience,.process {
         grid-template-columns:1fr
     }
 
@@ -747,9 +747,12 @@ footer {
     }
 
     section {
-        padding:72px 0
+        padding:15px 0
     }
 
+    #contact{
+        margin-top:-55px;
+    }
     .float-card {
         font-size:.72rem
     }
@@ -781,9 +784,15 @@ footer {
 
     .footer {
         flex-direction:column;
-        align-items:flex-start
+        align-items:center
     }
 
+    .hero-grid{
+        gap:0px
+    }
+    .hero{
+        padding-bottom: 0px !important;
+    }
 }
   </style>
  
@@ -815,6 +824,186 @@ footer {
 }
 </style>
 
+
+<style id="mobile-services-cards">
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+    }
+
+    .grid .card {
+        padding: 18px !important;
+        border-radius: 17px !important;
+    }
+
+    .grid .icon {
+        width: 42px !important;
+        height: 42px !important;
+        margin-bottom: 13px !important;
+        font-size: 18px !important;
+        border-radius: 12px !important;
+    }
+
+    .grid .card h3 {
+        font-size: 1rem !important;
+        line-height: 1.25 !important;
+        margin-bottom: 7px !important;
+    }
+
+    .grid .card p {
+        font-size: .82rem !important;
+        line-height: 1.5 !important;
+    }
+
+    .grid .mini-list {
+        margin-top: 11px !important;
+        gap: 5px !important;
+        font-size: .78rem !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .grid {
+        gap: 9px !important;
+    }
+
+    .grid .card {
+        padding: 15px !important;
+    }
+
+    .grid .card h3 {
+        font-size: .92rem !important;
+    }
+
+    .grid .card p,
+    .grid .mini-list {
+        font-size: .74rem !important;
+    }
+}
+</style>
+
+
+<style id="mobile-who-we-help">
+@media (max-width: 768px) {
+    /* Who we help section */
+    .audience {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+    }
+
+    .audience .card {
+        min-height: 0 !important;
+        padding: 16px !important;
+        border-radius: 16px !important;
+    }
+
+    .audience .tag {
+        margin-bottom: 9px !important;
+        font-size: .62rem !important;
+        letter-spacing: .10em !important;
+    }
+
+    .audience .card h3 {
+        font-size: .95rem !important;
+        line-height: 1.25 !important;
+        margin-bottom: 6px !important;
+    }
+
+    .audience .card p {
+        font-size: .76rem !important;
+        line-height: 1.45 !important;
+    }
+
+    .audience .mini-list {
+        margin-top: 9px !important;
+        gap: 4px !important;
+        font-size: .72rem !important;
+        line-height: 1.35 !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .audience {
+        gap: 8px !important;
+    }
+
+    .audience .card {
+        padding: 13px !important;
+    }
+
+    .audience .card h3 {
+        font-size: .86rem !important;
+    }
+
+    .audience .card p,
+    .audience .mini-list {
+        font-size: .68rem !important;
+    }
+}
+</style>
+
+
+<style id="mobile-what-we-build">
+@media (max-width: 768px) {
+    /* What we can build */
+    .portfolio {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+    }
+
+    .portfolio .project {
+        border-radius: 16px !important;
+    }
+
+    .portfolio .project-img {
+        height: 125px !important;
+    }
+
+    .portfolio .project-body {
+        padding: 14px !important;
+    }
+
+    .portfolio .project-body small {
+        font-size: .60rem !important;
+        letter-spacing: .09em !important;
+    }
+
+    .portfolio .project-body h3 {
+        font-size: .90rem !important;
+        line-height: 1.25 !important;
+        margin: 5px 0 6px !important;
+    }
+
+    .portfolio .project-body p {
+        font-size: .72rem !important;
+        line-height: 1.4 !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .portfolio {
+        gap: 8px !important;
+    }
+
+    .portfolio .project-img {
+        height: 105px !important;
+    }
+
+    .portfolio .project-body {
+        padding: 12px !important;
+    }
+
+    .portfolio .project-body h3 {
+        font-size: .82rem !important;
+    }
+
+    .portfolio .project-body p {
+        font-size: .66rem !important;
+    }
+}
+</style>
+
 </head>
  <body>
   <nav>
@@ -829,7 +1018,7 @@ footer {
      <a href="#services">
       Services
      </a>
-     <a href="#solutions">
+     <a class="irenex-approach-desktop-only" href="#solutions">
       Solutions
      </a>
      <a href="#work">
@@ -1093,7 +1282,7 @@ footer {
      </div>
     </div>
    </section>
-   <section id="solutions">
+   <section id="solutions" class="irenex-approach-desktop-only">
     <div class="container">
      <div class="problem">
       <div class="problem-box reveal irenex-approach-desktop-only">
@@ -1401,7 +1590,7 @@ footer {
    </section>
    <section id="contact">
     <div class="container">
-     <div class="cta reveal">
+     <div class="cta reveal irenex-approach-desktop-only">
       <div>
        <div class="eyebrow">
         Let's create something useful
